@@ -1,0 +1,32 @@
+.promo {
+    min-height: 1032px;
+    background: url('../../img/bg.jpg') center (center/cover) no-repeat;
+    position: relative;
+    .wrapper {
+        padding: 230px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    &__header {
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $white;
+        padding-bottom: 43px;
+        margin-left: 70px;
+    }
+    &__text {
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $white;
+        width: 706px;
+        text-align: center;
+        padding-bottom: 130px;
+    }
+    .logo {
+        padding-bottom: 81px;
+    }
+}

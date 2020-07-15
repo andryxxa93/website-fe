@@ -1,0 +1,64 @@
+.headline {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    &__info {
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &-title {
+            color: #00ccff;
+            font-size: 30px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $main-color;
+            span {
+                color: $orange;
+            }
+        }
+        &-slogan {
+            color: $grey;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+    &__lines {
+        position: absolute;
+        left: 25%;
+        &-item {
+            display: inline-block;
+            border: none;
+            margin: 0;
+            &:nth-child(1) {
+                position: absolute;
+                top: -12px;
+                background-color: rgba($main-color, 1);
+                height: 120px;
+                width: 1px;
+                transform: rotate(20deg);
+            }
+            &:nth-child(2) {
+                background-color: rgba($orange, 1);
+                height: 120px;
+                width: 1px;
+                transform: rotate(20deg);
+            }
+            &:nth-child(3) {
+                position: absolute;
+                left: 1px;
+                bottom: 25px;
+                background-color: rgba($main-color, 1);
+                width: 8px;
+                height: 58px;
+                transform: rotate(20deg);
+            }
+        }
+    }
+    &__text {
+        padding-left: 150px;
+        align-self: flex-end;
+        color: $grey;
+    }
+}

@@ -1,0 +1,13 @@
+@import "./base/normalize";
+@import "./libs/fonts";
+@import "./libs/bootstrap-grid.min";
+@import "./base/variables";
+*	{
+    font-family: 'Lato', sans-serif;
+}
+
+@import "./blocks/header";
+@import "./blocks/promo";
+@import "./blocks/about";
+@import "./blocks/headline";
+// @import "./media";
