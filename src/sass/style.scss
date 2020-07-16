@@ -2,6 +2,7 @@
 @import "./libs/fonts";
 @import "./libs/bootstrap-grid.min";
 @import "./base/variables";
+
 *	{
     font-family: 'Lato', sans-serif;
 }
@@ -10,4 +11,5 @@
 @import "./blocks/promo";
 @import "./blocks/about";
 @import "./blocks/headline";
+@import "./components/accordion.scss";
 // @import "./media";
