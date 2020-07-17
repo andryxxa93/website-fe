@@ -6,13 +6,15 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
+const webpack = require("webpack-stream");
 
+const dist = "./dist/";
 
 gulp.task('server', function() {
 
     browserSync({
         server: {
-            baseDir: "src"
+            baseDir: "dist"
         }
     });
 
@@ -20,20 +22,53 @@ gulp.task('server', function() {
     gulp.watch("src/js/*.js").on('change', browserSync.reload);
 });
 
+gulp.task("build-js", () => {
+    return gulp.src("./src/js/main.js")
+                .pipe(webpack({
+                    mode: 'development',
+                    output: {
+                        filename: 'script.js'
+                    },
+                    watch: false,
+                    devtool: "source-map",
+                    module: {
+                        rules: [
+                          {
+                            test: /\.m?js$/,
+                            exclude: /(node_modules|bower_components)/,
+                            use: {
+                              loader: 'babel-loader',
+                              options: {
+                                presets: [['@babel/preset-env', {
+                                    debug: true,
+                                    corejs: 3,
+                                    useBuiltIns: "usage"
+                                }]]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                }))
+                .pipe(gulp.dest(dist))
+                .on("end", browserSync.reload);
+});
+
+
 gulp.task('styles', function() {
-    return gulp.src("src/sass/**/*.+(scss|sass)")
+    return gulp.src("src/assets/sass/**/*.+(scss|sass)")
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename({suffix: 'min', prefix: ''}))
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest("src/css"))
+        .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function() {
-    gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
+    gulp.watch("src/assets/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
     gulp.watch("src/*.html").on('change', gulp.parallel('html'));
-    gulp.watch("src/js/*.js").on('change', gulp.parallel('scripts'));
+    gulp.watch("./src/js/**/*.js").on('change', gulp.parallel("build-js"));
 });
 
 gulp.task('html', function() {
@@ -42,25 +77,20 @@ gulp.task('html', function() {
     .pipe(gulp.dest("dist/"));
 });
 
-gulp.task('scripts', function() {
-    return gulp.src("src/**/*.js")
-    .pipe(gulp.dest("dist/"));
-});
-
 gulp.task('fonts', function() {
-    return gulp.src("src/fonts/**/*")
+    return gulp.src("src/assets/fonts/**/*")
     .pipe(gulp.dest("dist/fonts"));
 });
 
 gulp.task('icons', function() {
-    return gulp.src("src/icons/**/*")
+    return gulp.src("src/assets/icons/**/*")
     .pipe(gulp.dest("dist/icons"));
 });
 
 gulp.task('images', function() {
-    return gulp.src("src/img/**/*")
+    return gulp.src("src/assets/img/**/*")
     .pipe(imagemin())
     .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'scripts', 'fonts', 'icons', 'images'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'build-js', 'fonts', 'icons', 'images'));

@@ -1,6 +1,7 @@
-.accordion {
+.tab {
     &__nav {
-        padding-top: 110px;
+        padding-top: 92px;
+        padding-left: 0;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -19,6 +20,7 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            transition: .5s ease-in;
             &_active {
                 background-color: $main-color;
                 color: $white;
@@ -26,21 +28,33 @@
         }
     }
     &__content {
-        padding-top: 124px;
+        position: relative;
+        padding-top: 108px;
+        width: 941px;
+        height: 365px;
+        transition: .5s ease-in;
         &-block {
-            padding-top: 84px;
+            position: relative;
+            padding-top: 42px;
             display: flex;
             flex-direction: row;
             &:nth-child(1) {
                 padding-top: 0;
+                padding-bottom: 42px;
             }
+            z-index: 10;
         }
         &-item {
             display: flex;
             flex-direction: row;
             align-items: center;
-            &:nth-child(3) {
+            &:nth-child(2) {
                 padding-left: 71px;
+            }
+            &:hover {
+               .tab__content-picture {
+                    background-color: $main-color;
+               }
             }
          }
         &-picture {
@@ -51,9 +65,7 @@
             justify-content: center;
             transform: skew(-9deg);
             background-color: $section-about;
-            &_active {
-                background-color: $main-color;
-            }
+            transition: .9s;
             img {
                 transform: skew(9deg);
             }

@@ -1,0 +1,37 @@
+.lines {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 19%;
+    left: -2%;
+    z-index: 1;
+    &-horizontal {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        border-width: medium;
+        border-top: 2px solid rgba($color: $grey, $alpha: .2);
+        z-index: 1;
+    }
+    &-vertical {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        height: 100%;
+        width: 1px;
+        border-width: medium;
+        border-left: 2px solid rgba($color: $grey, $alpha: .2);
+        z-index: 1;
+    }
+}
+.square {
+    position: absolute;
+    left: 46%;
+    top: 64%;
+    width: 1px;
+    height: 1px;
+    border: 20px solid rgba($color: #fff, $alpha: 1.0);
+    z-index: 10;
+}

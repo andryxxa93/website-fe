@@ -1,0 +1,13 @@
+.faded {
+    animation-name: faded;
+    animation-duration: 1s;
+}
+
+@keyframes faded {
+    from {
+        opacity: .1;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -20,13 +20,14 @@
         }
         &-slogan {
             color: $grey;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 400;
+            width: 192px;
         }
     }
     &__lines {
         position: absolute;
-        left: 25%;
+        left: 26%;
         &-item {
             display: inline-block;
             border: none;
@@ -57,7 +58,7 @@
         }
     }
     &__text {
-        padding-left: 150px;
+        padding-left: 126px;
         align-self: flex-end;
         color: $grey;
     }
