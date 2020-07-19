@@ -3,15 +3,24 @@
 @import "./libs/bootstrap-grid.min";
 @import "./base/variables";
 @import "./base/animations";
+@import "./base/lines.scss";
+@import "./base/title.scss";
+@import "./base/triangle";
 
 *	{
     font-family: 'Lato', sans-serif;
 }
 
+@import "./components/tab.scss";
+
+@import "./helpers/display.scss";
+@import "./helpers/font";
+@import "./helpers/align";
+
 @import "./blocks/header";
 @import "./blocks/promo";
 @import "./blocks/about";
 @import "./blocks/headline";
-@import "./components/tab.scss";
-@import "./blocks/lines.scss";
+@import "./blocks/skills.scss";
+@import "./blocks/team";
 // @import "./media";

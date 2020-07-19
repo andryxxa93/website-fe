@@ -1,0 +1,19 @@
+.title {
+    color: $headText;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text {
+    padding-top: 54px;
+    color: $headText;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    display: block;
+    max-width: 548px;
+    margin: 0 auto;
+    text-align: center;
+}

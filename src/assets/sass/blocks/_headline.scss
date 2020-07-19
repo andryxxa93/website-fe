@@ -17,12 +17,20 @@
             span {
                 color: $orange;
             }
+            &_white {
+                span {
+                    color: $white;
+                }
+            }
         }
         &-slogan {
             color: $grey;
             font-size: 18px;
             font-weight: 400;
             width: 192px;
+            &_white {
+                color: $white;
+            }
         }
     }
     &__lines {
@@ -61,5 +69,8 @@
         padding-left: 126px;
         align-self: flex-end;
         color: $grey;
+        &_white {
+            color: $white;
+        }
     }
 }

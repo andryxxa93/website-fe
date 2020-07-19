@@ -1,0 +1,29 @@
+.triangle {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    &-white {
+        left: 0;
+        border-right-width: 0px;
+        border-left-width: 100vw;
+        border-bottom: 20vh solid white;
+        z-index: 10;
+    }
+    &-blue {
+        right: 0;
+        top: 0;
+        border-top-width: 8vh;
+        border-bottom-width: 4.8vw;
+        border-right: 40vw solid $main-color;
+        z-index: 20;
+    }
+    &-top {
+        top: 0;
+        transform: rotate(180deg);
+    }
+    &-grey {
+        border-bottom: 20vh solid $grey-bg;
+    }
+}
