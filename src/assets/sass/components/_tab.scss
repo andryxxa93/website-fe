@@ -29,33 +29,63 @@
     }
     &__content {
         position: relative;
+        display: flex;
         padding-top: 108px;
-        width: 941px;
+        width: 100%;
         height: 365px;
         transition: .5s ease-in;
         &-block {
             position: relative;
-            padding-top: 42px;
             display: flex;
-            flex-direction: row;
-            &:nth-child(1) {
-                padding-top: 0;
-                padding-bottom: 42px;
-            }
-            z-index: 10;
+            flex-direction: column;
+            width: 50%;
         }
         &-item {
             display: flex;
             flex-direction: row;
             align-items: center;
-            &:nth-child(2) {
-                padding-left: 71px;
+            padding-top: 42px;
+            padding-bottom: 42px;
+            position: relative;
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 100%;
+                width: 90%;
+                height: 0px;
+                border-bottom: 2px solid rgba($color: $grey-light, $alpha: .2);
+                left: -1%;
+            }
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 8.5%;
+                width: 0;
+                height: 88%;
+                top: 7%;
+                border-left: 2px solid rgba($color: $grey-light, $alpha: .2);
+            }
+            &_left-border {
+                &:after {
+                    left: -7%;
+                }
+                &:before {
+                    border-left: none;
+                }
+            }
+            &:nth-last-child(1) {
+                &:after {
+                    border-bottom: none;
+                }
             }
             &:hover {
                .tab__content-picture {
                     background-color: $main-color;
                }
             }
+            
          }
         &-picture {
             width: 104px;
@@ -88,5 +118,4 @@
             font-weight: 400;
         }
     }
-    
 }

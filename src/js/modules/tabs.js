@@ -1,4 +1,4 @@
-const tabs = (headerSelector,tabSelector, contentSelector, activeClass, display = 'block') => {
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass, display = 'block') => {
 
     const header = document.querySelector(headerSelector),
         tabs = document.querySelectorAll(tabSelector),
@@ -7,7 +7,9 @@ const tabs = (headerSelector,tabSelector, contentSelector, activeClass, display 
         // Hide all content and remove active class from tabs
         function hideTabContent() {
             content.forEach(item => {
-                item.style.display = 'none';
+                if(item.parentNode.classList.contains(tabSelector.slice(1, 4))) {
+                    item.style.display = 'none';
+                }
             });
             tabs.forEach(tab => {
                 tab.classList.remove(activeClass);
@@ -16,18 +18,25 @@ const tabs = (headerSelector,tabSelector, contentSelector, activeClass, display 
         // show tab content which coresponds to recievd number
         function showTabContent(i = 0) { 
             tabs[i].classList.add(activeClass);
-            content[i].style.display = 'block';
+            content[i].style.display = display;
         }
         hideTabContent();
         showTabContent();
 
 
         // add event listener to tabs, and show content after click
-        tabs.forEach((tab, i) => {
-            tab.addEventListener('click', () => {
-                hideTabContent();
-                showTabContent(i);
-            });
+        header.addEventListener('click', (e) => {
+            const target = e.target;
+            if(target &&
+                (target.classList.contains(tabSelector.replace(/\./, "")) ||
+            target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
+                tabs.forEach((item, i) => {
+                    if(target == item || target.parentNode == item) {
+                        hideTabContent();
+                        showTabContent(i);
+                    }
+                });
+            }
         });
 
 } 
