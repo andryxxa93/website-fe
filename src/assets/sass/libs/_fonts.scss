@@ -100,7 +100,11 @@
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
     }
     
-    .icon-twitter:before { content: '\f099'; } /* '' */
+    .icon-twitter:before { content: '\e800'; } /* '' */
+    .icon-linkedin:before { content: '\e801'; } /* '' */
     .icon-facebook:before { content: '\f09a'; } /* '' */
-    .icon-linkedin:before { content: '\f0e1'; } /* '' */
+    .icon-pinterest-circled:before { content: '\f0d2'; } /* '' */
+    .icon-quote-right:before { content: '\f10e'; } /* '' */
+    .icon-dribbble:before { content: '\f17d'; } /* '' */
     .icon-behance:before { content: '\f1b4'; } /* '' */
+    .icon-gplus:before { content: '\f30f'; } /* '' */

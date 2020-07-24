@@ -1,3 +1,7 @@
 .services {
     padding: 129px 0 167px 0;
+    min-height: 792px;
+    &__wrapper {
+      min-height: 548px;  
+    }
 }

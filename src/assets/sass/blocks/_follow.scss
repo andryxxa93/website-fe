@@ -1,0 +1,29 @@
+.follow {
+    padding: 251px 0 219px 0;
+    position: relative;
+    min-height: 830px;
+    background: url('../../img/team-bg.jpg') center (center/cover) no-repeat;
+    overflow: hidden;
+    &__slider {
+        display: block;
+        width: 795px;
+        height: 360px;
+        margin: 0 auto;
+    }
+    &__text {
+        max-width: 795px;
+        padding-top: 95px;
+    }
+    &__link {
+        padding: 135px 0 0 0;
+        a {
+            text-decoration: none;
+        }
+    }
+    &__ceo {
+        padding: 73px 0 0 0;
+    }
+    .slider__indicators {
+        bottom: 30px;
+    }
+}

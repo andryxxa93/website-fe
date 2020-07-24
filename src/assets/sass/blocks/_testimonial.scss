@@ -1,0 +1,66 @@
+.testimonial {
+    padding: 104px 0 278px 0;
+    position: relative;
+    min-height: 944px;
+    &__slider {
+        display: block;
+        margin: 0 auto;
+    }
+    &__technologies {
+        padding-top: 168px;
+    }
+    &__comment {
+        margin: 53px 10px;
+        padding: 24px 13px 17px 13px;
+        min-width: 300px;
+        min-height: 202px;
+        background-color: $grey-bg;
+        border: 1px solid #efefef;
+        border-radius: 4px;
+        transition: .3s all;
+        &:hover {
+            border: 1px solid $main-color;
+        }
+    }
+    &__text {
+        padding-bottom: 43px;
+        font-size: 16px;
+        color: $grey-light;
+    }
+    &__line {
+        &:after {
+            content: "";
+            display: block;
+            bottom: 0;
+            width: 100%;
+            border-bottom: 2px solid rgba($color: $grey-light, $alpha: .2);
+        }
+    }
+    &__person-info {
+        padding-top: 16px;
+    }
+    &__foto {
+        padding-right: 12px;
+    }
+    &__item {
+        &:first-child {
+            width: 81px;
+            height: 60px;
+        }
+    }
+    .headline__text {
+        margin-left: 68px;
+    }
+    .slider__indicators {
+        li {
+            background-color: $grey-light;
+            opacity: .5;
+        }
+        .active {
+            opacity: 1;
+        }
+    }
+    .slider__indicators {
+        bottom: -40px;
+    }
+}

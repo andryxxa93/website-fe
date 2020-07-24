@@ -4,7 +4,7 @@
     flex-direction: row;
     height: 90px;
     &__info {
-        width: 220px;
+        max-width: 280px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -37,7 +37,6 @@
         position: absolute;
         left: 26%;
         &-item {
-            display: inline-block;
             border: none;
             margin: 0;
             &:nth-child(1) {
@@ -66,9 +65,9 @@
         }
     }
     &__text {
-        padding-left: 126px;
         align-self: flex-end;
         color: $grey;
+        margin-left: 150px;
         &_white {
             color: $white;
         }
