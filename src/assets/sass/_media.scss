@@ -45,10 +45,22 @@
             margin: 0 auto;
         }
     }
-    .follow {
-        padding: 130px 0 150px 0;
-    }
     .testimonial {
         padding: 80px 0 100px 0;
+    }
+    .prices {
+        padding: 100px 0 100px 0;
+        &__wrapper {
+            margin: 0 auto;
+            width: 80%;
+            justify-content: space-around;
+            padding: 100px 0 0 0;
+        }
+        .cost {
+            font-size: 50px;
+        }
+        &__button {
+            margin: 30px 0 0 0;
+        }
     }
 }
