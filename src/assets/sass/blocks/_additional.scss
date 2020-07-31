@@ -1,6 +1,6 @@
 .additional {
-    padding: 130px 0 145px 0;
-    min-height: 1080px;
+    padding: 17vh 0 18vh 0;
+    box-sizing: content-box;
     background: $grey-bg;
     &__header {
         color: $grey;
@@ -19,6 +19,7 @@
         list-style-type: none;
         margin: 0 auto;
         padding: 0;
+        margin-bottom: 25px;
         li {
             text-align: center;
             padding: 10px 16px;
@@ -37,7 +38,8 @@
         }
     }
     &__block {
-        margin-top: 76px;
+        margin:0 10px;
+        margin-top: 51px;
         &:nth-last-child(-n+3) {
             margin-top: 51px;
         }

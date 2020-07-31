@@ -2,4 +2,32 @@
     padding: 128px 0 203px 0;
     background-color: $grey-bg;
     min-height: 778px;
+    &__wrapper {
+        padding-top: 74px;
+    }
+    &__block {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        min-width: 230px;
+        background-color: $factsBlockColor;
+        border: 1px solid #cccccc;
+        &:nth-last-child(-n+3) {
+            border-left: none;
+        }
+        .icon {
+            font-size: 70px;
+        }
+    }
+    &__text {
+        padding-top: 40px;
+        padding-bottom: 23px;
+        color: $main-color;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    span {
+        color: $black-text;
+        font-size: 52px;
+        font-weight: 300;
+    }
 }

@@ -1,0 +1,69 @@
+.prices {
+    padding: 210px 0 142px 0;
+    background: $grey-bg;
+    &__wrapper {
+        padding-top: 168px;
+    }
+    &__plan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 82px;
+        background-color: $main-color;
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    &__price {
+        padding-top: 57px;
+        padding-bottom: 12px;
+        color: $black-text;
+        font-size: 36px;
+        font-weight: 700;
+        .dollar {
+            vertical-align: top;
+            color: #333333;
+            font-size: 36px;
+            font-weight: 700;
+        }
+        .cost {
+            color: #333333;
+            font-size: 61px;
+            font-weight: 700;
+        }
+        .month {
+            color: #333333;
+            font-family: Lato;
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+    &__descr {
+        span {
+            color: $black-text;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 40px;
+        }
+    }
+    &__button {
+        margin-top: 57px;
+        width: 121px;
+        height: 38px;
+        border: 1px solid $black-text;
+        background-color: transparent;
+        border-radius: 3px;
+        color: $black-text;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__trial {
+        color: $grey-light;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+}

@@ -39,12 +39,13 @@
     }
     &__header {
         text-align: center;
-        color: $black-text;
+        color: $workText;
         font-size: 48px;
         font-weight: 300;
     }
     &__subheader {
         font-size: 24px;
+        color: $workText;
         font-weight: 400;
         text-align: center;
         margin-top: 35px;

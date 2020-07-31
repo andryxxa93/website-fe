@@ -1,9 +1,19 @@
 .title {
-    color: $headText;
+    color: $titleColor;
     font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+    padding-bottom: 54px;
+}
+
+.subtitle {
+    max-width: 540px;
+    color: $subtitleColor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 auto;
 }
 
 .text {

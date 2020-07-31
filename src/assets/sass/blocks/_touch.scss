@@ -1,0 +1,84 @@
+.touch {
+    padding: 184px 0 148px 0;
+    &__wrapper {
+        padding-top: 204px;
+        form {
+            max-width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            .input {
+                margin-top: 12px;
+                padding-left: 21px;
+                width: 266px;
+                height: 50px;
+                border: 1px solid #cccccc;
+                border-radius: 4px;
+                background-color: #ffffff;
+                color: #cccccc;
+                font-size: 16px;
+                font-weight: 400;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .name {
+                margin-top: 0;
+            }
+            .subject {
+                width: 540px;
+                height: 50px;
+            }
+            .message {
+                padding-top: 19px;
+                width: 540px;
+                height: 161px;
+                resize: none;
+            }
+            .email {
+                margin-top: 0;
+                margin-left: 8px;
+            }
+        }
+    }
+    &__info {
+        &-item {
+            color: #666666;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            margin-left: 20px;
+        }
+        &-row {
+            margin-top: 15px;
+        }
+    }
+    &__header {
+        color: $black-text;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__text {
+        margin-top: 21px;
+        margin-bottom: 51px;
+        width: 336px;
+        color: #666666;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    &__button {
+        margin-top: 14px;
+        width: 147px;
+        height: 50px;
+        background-color: #00ccff;
+        border-style: none;
+        border-radius: 4px;
+    }
+    .icon {
+        color: $grey;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}

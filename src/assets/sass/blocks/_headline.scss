@@ -9,11 +9,10 @@
         flex-direction: column;
         align-items: flex-start;
         &-title {
-            color: #00ccff;
+            color: $main-color;
             font-size: 30px;
             font-weight: 900;
             text-transform: uppercase;
-            color: $main-color;
             span {
                 color: $orange;
             }
@@ -24,7 +23,7 @@
             }
         }
         &-slogan {
-            color: $grey;
+            color: $headLineText;
             font-size: 18px;
             font-weight: 400;
             width: 192px;
@@ -39,34 +38,29 @@
         &-item {
             border: none;
             margin: 0;
+            transform: rotate(20deg);
+            height: 120px;
+            width: 1px;
+            background-color: rgba($main-color, 1);
             &:nth-child(1) {
                 position: absolute;
                 top: -12px;
-                background-color: rgba($main-color, 1);
-                height: 120px;
-                width: 1px;
-                transform: rotate(20deg);
             }
             &:nth-child(2) {
                 background-color: rgba($orange, 1);
-                height: 120px;
-                width: 1px;
-                transform: rotate(20deg);
             }
             &:nth-child(3) {
                 position: absolute;
                 left: 1px;
                 bottom: 25px;
-                background-color: rgba($main-color, 1);
                 width: 8px;
                 height: 58px;
-                transform: rotate(20deg);
             }
         }
     }
     &__text {
         align-self: flex-end;
-        color: $grey;
+        color: $headLineText;
         margin-left: 150px;
         &_white {
             color: $white;

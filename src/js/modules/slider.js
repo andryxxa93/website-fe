@@ -1,4 +1,4 @@
-const slider = function(sliderSectionSelector) {
+const slider = function(sliderSectionSelector, time = 4000) {
 
     const sliderSection = document.querySelector(sliderSectionSelector);
     const slider = sliderSection.querySelector('.slider');
@@ -42,7 +42,7 @@ const slider = function(sliderSectionSelector) {
             translateX(-${offset}px) `;
             dots.forEach(dot => dot.classList.remove('active'));
             dots[slideIndex].classList.add('active');
-        }, 4000);
+        }, time);
     }
     activateSlider();
     slider.addEventListener('mouseover', () => {

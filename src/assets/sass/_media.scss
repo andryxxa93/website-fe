@@ -1,114 +1,54 @@
 @media (max-width: 1200px) {
-    header {
-        .address {
-            padding: 10px 0 10px 0;
-        }
-    }
     .promo {
-        min-height: auto;
-        padding: 15px 0 0 0;
-        &__right {
-            align-content: flex-end;
-            img {
-                margin-top: 67px;
-                width: 80%;
-            }
+        min-height: 800px;
+        .wrapper {
+            padding-top: 200px;
+        }
+        .logo {
+            width: 150px;
+        }
+        &__text {
+            font-size: 20px;
+            padding-bottom: 50px;
         }
     }
-    .opportunities {
-        padding: 40px 80px;
-        min-height: auto;
-        .rectangle  {
-            width: 300px;
-            height: 230px;
-        }
-        &__header {
-            margin-top: 115px;
+    .about {
+        padding: 70px 0 50px 0;
+        .tab__content {
+            padding-top: 50px;
         }
     }
-    .arrows {
-        margin-top: 30px;
+    .skills {
+        padding: 80px 0 50px 0;
     }
-    .text {
-        &_absolute {
-            bottom: 20px;
-            font-size: 16px;
+    .title {
+            padding-bottom: 20px;    
+    }
+    .facts {
+        min-height: 600px;
+        padding: 60px 0 80px 0;
+        .icon {
+            font-size: 60px;
         }
     }
-    .button-main {
-        width: 232px;
-        height: 62px;
-    }
-    .expert {
-        min-height: auto;
-        padding: 20px 0;
-        .navigation {
-            height: 45px;
+    .work {
+        padding-top: 100px;
+        &__wrapper {
+            padding-top: 100px;
         }
     }
-    .slider {
-        width: 1000px;
-        margin: 0 auto;
-        &__content {
-            width: 875px;
-            height: 510px;
+    .additional {
+        &__subheader {
+            padding-bottom: 40px;
+        }
+        &__menu {
+            margin: 0 auto;
         }
     }
-    .start {
-        padding: 40px 0;
-        height: auto;
+    .follow {
+        padding: 130px 0 150px 0;
     }
-}
-
-@media (max-width: 1024px) {
-    header {
-        .address {
-            &__details {
-                margin-left: 6px;
-            }
-            &__contacts {
-                font-size: 11px;
-            }
-        }
-    }
-    .promo {
-        min-height: auto;
-        &__header {
-            font-size: 38px;
-        }
-        &__right {
-            align-content: flex-end;
-            img {
-                margin-top: 67px;
-                width: 80%;
-            }
-        }
-    }
-    .slider {
-        width: 100%;
-    }
-    .button-main {
-        width: 232px;
-        height: 62px;
-    }
-    .opportunities {
-        .rectangle  {
-            width: 275px;
-            height: 242px;
-        }
-        &__header {
-            font-size: 44px;
-        }
-    }
-    .text {
-        font-size: 16px;
-        &_data {
-            width: 100%;
-        }
-    }
-    .expert {
-        .slider {
-            height: auto;
-        }
+    .testimonial {
+        padding: 80px 0 100px 0;
     }
 }

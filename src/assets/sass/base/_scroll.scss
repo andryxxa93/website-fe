@@ -1,0 +1,20 @@
+.scroll {
+    position: relative;
+    width: 40px;
+    height: 62px;
+    border: 3px solid #ffffff;
+    border-radius: 50% / 30%;
+    background-color: transparent;
+    opacity: 0.7;
+    animation: nudgeMouse 5s ease-out infinite;
+    .round {
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        width: 11px;
+        height: 18px;
+        border: 3px solid #ffffff;
+        border-radius: 50% / 30%;
+        animation: trackBallSlide 5s ease-out infinite;
+    }
+}

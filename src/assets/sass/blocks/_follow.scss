@@ -1,7 +1,7 @@
 .follow {
     padding: 251px 0 219px 0;
     position: relative;
-    min-height: 830px;
+    box-sizing: content-box;
     background: url('../../img/team-bg.jpg') center (center/cover) no-repeat;
     overflow: hidden;
     &__slider {

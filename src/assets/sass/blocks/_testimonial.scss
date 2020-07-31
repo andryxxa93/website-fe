@@ -1,7 +1,7 @@
 .testimonial {
     padding: 104px 0 278px 0;
     position: relative;
-    min-height: 944px;
+    box-sizing: content-box;
     &__slider {
         display: block;
         margin: 0 auto;

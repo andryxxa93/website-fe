@@ -2,6 +2,7 @@
 @import "./libs/fonts";
 @import "./libs/bootstrap-grid.min";
 @import "./base/variables";
+@import "./base/scroll";
 @import "./base/animations";
 @import "./base/lines.scss";
 @import "./base/title.scss";
@@ -32,4 +33,7 @@
 @import "./blocks/testimonial";
 @import "./blocks/quote.scss";
 @import "./blocks/additional";
-// @import "./media";
+@import "./blocks/prices.scss";
+@import "./blocks/touch";
+@import "./blocks/footer";
+@import "./media";
