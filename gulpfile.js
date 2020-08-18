@@ -61,7 +61,7 @@ gulp.task('styles', function() {
         .pipe(rename({suffix: 'min', prefix: ''}))
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest("dist/css"))
+        .pipe(gulp.dest("dist/assets/css"))
         .pipe(browserSync.stream());
 });
 
@@ -79,18 +79,18 @@ gulp.task('html', function() {
 
 gulp.task('fonts', function() {
     return gulp.src("src/assets/fonts/**/*")
-    .pipe(gulp.dest("dist/fonts"));
+    .pipe(gulp.dest("dist/assets/fonts"));
 });
 
 gulp.task('icons', function() {
     return gulp.src("src/assets/icons/**/*")
-    .pipe(gulp.dest("dist/icons"));
+    .pipe(gulp.dest("dist/assets/icons"));
 });
 
 gulp.task('images', function() {
     return gulp.src("src/assets/img/**/*")
     .pipe(imagemin())
-    .pipe(gulp.dest("dist/img"));
+    .pipe(gulp.dest("dist/assets/img"));
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'build-js', 'fonts', 'icons', 'images'));

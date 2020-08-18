@@ -1,20 +1,22 @@
 .tab {
     box-sizing: content-box;
     &__nav {
-        padding-top: 92px;
+        padding-top: 15vh;
         padding-left: 0;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         &-item {
-            width: 154px;
-            height: 57px;
+            max-width: 175px;
+            width: 15vw;
+            max-height: 57px;
+            height: 8vh;
             transform: skew(-20deg);
             background-color: $section-about;
             margin-left: 1px;
             text-transform: uppercase;
-            font-size: 20px;
+            font-size: calcFluidFontSize(13, 20, 300, 1440);
             font-weight: 400;
             color: $black-text;   
             display: flex;
@@ -30,9 +32,10 @@
     }
     &__content {
         display: flex;
-        padding-top: 108px;
+        padding-top: 13vh;
         width: 100%;
-        height: 365px;
+        max-height: 365px;
+        height: 50vh;
         transition: .5s ease-in;
         &-block {
             display: flex;
@@ -43,8 +46,8 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding-top: 42px;
-            padding-bottom: 42px;
+            padding-top: 7vh;
+            padding-bottom: 7vh;
             position: relative;
             &:after {
                 content: "";
@@ -87,8 +90,10 @@
             
          }
         &-picture {
-            width: 104px;
-            height: 105px;
+            max-width: 104px;
+            width: 7vw;
+            max-height: 105px;
+            height: 14vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -96,24 +101,25 @@
             background-color: $section-about;
             transition: .9s;
             img {
+                max-width: 80%;
                 transform: skew(9deg);
             }
         }
         &-info {
             display: flex;
             flex-direction: column;
-            padding-left: 25px;
+            padding-left: 2vw;
         }
         &-title {
             color: $black-text;
-            font-size: 20px;
+            font-size: calcFluidFontSize(13, 20, 300, 1440);
             font-weight: 700;
         }
         &-text {
-            padding-top: 11px;
+            padding-top: 1.5vh;
             max-width: 285px;
             color: $grey-light;
-            font-size: 16px;
+            font-size: calcFluidFontSize(12, 16, 300, 1440);
             font-weight: 400;
         }
     }

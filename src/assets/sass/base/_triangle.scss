@@ -9,14 +9,15 @@
         border-right-width: 0px;
         border-left-width: 100vw;
         border-bottom: 10vw solid white;
+        bottom: -1px;
         z-index: 16;
     }
     &-blue {
         right: 0;
         top: -2px;
-        border-top-width: 7.6vh;
-        border-bottom-width: 3.8vw;
-        border-right: 37vw solid #0cf;
+        border-top-width: 4.6vw;
+        border-bottom-width: 5vw;
+        border-right: 45vw solid #0cf;
         z-index: 20;
     }
     &-top {

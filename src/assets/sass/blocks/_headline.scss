@@ -10,7 +10,7 @@
         align-items: flex-start;
         &-title {
             color: $main-color;
-            font-size: 30px;
+            font-size: calcFluidFontSize(22, 30, 300, 1440);
             font-weight: 900;
             text-transform: uppercase;
             span {
@@ -24,7 +24,7 @@
         }
         &-slogan {
             color: $headLineText;
-            font-size: 18px;
+            font-size: calcFluidFontSize(14, 18, 300, 1440);
             font-weight: 400;
             width: 192px;
             &_white {
@@ -62,6 +62,7 @@
         align-self: flex-end;
         color: $headLineText;
         margin-left: 150px;
+        font-size: calcFluidFontSize(13, 16, 300, 1440);;
         &_white {
             color: $white;
         }

@@ -7,6 +7,11 @@ footer {
         a {
             color: #ffffff;
             text-decoration: none;
+            transition: .5s all;
+            &:hover {
+                color: $main-color;
+                font-size: 40px;
+            }
         }
     }
     .down {
