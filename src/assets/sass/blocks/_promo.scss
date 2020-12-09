@@ -18,6 +18,7 @@
         color: $white;
         padding-bottom: 10vh;
         margin-left: 4vw;
+        
     }
     &__text {
         font-size: calcFluidFontSize(13, 22, 300, 1440);
@@ -33,3 +34,4 @@
         padding-bottom: 15vh;
     }
 }
+ 
