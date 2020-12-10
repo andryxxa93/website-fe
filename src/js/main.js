@@ -7,7 +7,7 @@ import forms from './modules/forms';
 window.addEventListener('DOMContentLoaded', function() {
     'use strict'
     let modalState = {}
-    tabs('.tab__nav', '.tab__nav-item', '.tab__content', 'tab__nav-item_active', 'flex');
+    tabs('.tab__nav', '.tab__nav-item', '.tab__content', 'tab__nav-item_active', 'grid');
     slider('.follow');
     slider('.testimonial');
     slider('.quote', 5000);

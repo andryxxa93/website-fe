@@ -4257,7 +4257,7 @@ window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   var modalState = {};
-  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_0__["default"])('.tab__nav', '.tab__nav-item', '.tab__content', 'tab__nav-item_active', 'flex');
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_0__["default"])('.tab__nav', '.tab__nav-item', '.tab__content', 'tab__nav-item_active', 'grid');
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_1__["default"])('.follow');
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_1__["default"])('.testimonial');
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_1__["default"])('.quote', 5000);

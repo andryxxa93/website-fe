@@ -8,10 +8,8 @@
         justify-content: flex-start;
         align-items: center;
         &-item {
-            max-width: 175px;
-            width: 15vw;
-            max-height: 57px;
-            height: 8vh;
+            width: 175px;
+            height: 58px;
             transform: skew(-20deg);
             background-color: $section-about;
             margin-left: 1px;
@@ -31,11 +29,9 @@
         }
     }
     &__content {
-        display: flex;
+        display: grid;
+        grid-template: repeat(2, 177px) / repeat(2, 456px);
         padding-top: 13vh;
-        width: 100%;
-        max-height: 365px;
-        height: 50vh;
         transition: .5s ease-in;
         &-block {
             display: flex;
@@ -46,10 +42,9 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding-top: 7vh;
-            padding-bottom: 7vh;
+            padding: 7vh;
             position: relative;
-            &:after {
+            &:not(:nth-last-child(-n+2)):after {
                 content: "";
                 display: block;
                 position: absolute;
@@ -57,29 +52,22 @@
                 width: 90%;
                 height: 0px;
                 border-bottom: 2px solid rgba($color: $grey-light, $alpha: .2);
-                left: -1%;
+                left: 5%;
             }
-            &:before {
+            &:not(:nth-child(even)):before {
                 content: "";
                 display: block;
                 position: absolute;
-                right: 8.5%;
+                right:0;
                 width: 0;
-                height: 88%;
+                height: 80%;
                 top: 7%;
                 border-left: 2px solid rgba($color: $grey-light, $alpha: .2);
             }
-            &_left-border {
-                &:after {
-                    left: -7%;
-                }
+            &:nth-child(3) {
                 &:before {
-                    border-left: none;
-                }
-            }
-            &:nth-last-child(1) {
-                &:after {
-                    border-bottom: none;
+                    top: unset;
+                    bottom: 7%;
                 }
             }
             &:hover {
@@ -90,10 +78,8 @@
             
          }
         &-picture {
-            max-width: 104px;
-            width: 7vw;
-            max-height: 105px;
-            height: 14vh;
+            width: 130px;
+            height: 122px;
             display: flex;
             align-items: center;
             justify-content: center;
